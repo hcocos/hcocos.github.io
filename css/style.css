@@ -458,7 +458,7 @@ a:focus {
  }
 
  #wrapper ul li img {
-   float: left;
+   float: center;
  }
 
  #wrapper ul li .details {

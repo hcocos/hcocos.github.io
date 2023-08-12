@@ -480,6 +480,10 @@ a:focus {
 
 /* newinput */
 
+.about_section .about_text {
+  width: 70%;
+  margin-left: auto;
+}
 
 .about_section .img_container {
   display: -webkit-box;
@@ -499,6 +503,7 @@ a:focus {
 
 .about_section .img_container .img-box.b1 {
   width: 70%;
+  margin-left: auto;
 }
 
 .about_section .img_container .img-box.b2 {

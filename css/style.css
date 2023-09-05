@@ -97,12 +97,13 @@ body {
 a,
 a:hover,
 a:focus {
+  color: blue;
   text-decoration: none;
 }
 
 a:hover,
 a:focus {
-  color: initial;
+  color: green;
 }
 
 .btn,

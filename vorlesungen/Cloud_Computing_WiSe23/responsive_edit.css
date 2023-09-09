@@ -1,0 +1,170 @@
+@media (max-width: 1120px) {}
+
+@media (max-width: 992px) {
+
+  .hero_area {
+    height: auto;
+  }
+
+  .header_section {
+    padding-top: 10px;
+  }
+
+  #navbarSupportedContent {
+    margin-top: 25px;
+  }
+
+  .slider_section {
+
+    padding-top: 75px;
+    padding-bottom: 150px;
+
+  }
+
+  .about_section .img-box {
+    margin: 0 5%;
+  }
+
+  .about_section .detail-box {
+    margin-right: 5%;
+  }
+
+  .service_section .service_container .box {
+    -ms-flex-preferred-size: 48%;
+    flex-basis: 48%;
+  }
+
+  .about_section .img_container .img-box.b2 {
+    margin-top: -5%;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+
+  .slider_section .detail_box {
+    text-align: center;
+  }
+
+  .slider_section .img_content {
+    margin-top: 55px;
+  }
+
+  .contact_section .map_container {
+    margin-top: 45px;
+  }
+
+  .info_section .info_contact a {
+    margin-bottom: 15px;
+  }
+
+  .info_section .info_social {
+    justify-content: center;
+  }
+
+  .service_section .service_container .box {
+    flex-basis: 98%;
+  }
+
+  .contact_section form {
+    padding-right: 0;
+  }
+
+  .info_section .info_contact a {
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .about_section .img_container .img-box.b1 {
+    width: 80%;
+  }
+
+  .about_section .img_container .img-box.b2 {
+    width: 55%;
+  }
+
+  .info_section .info_form form {
+    flex-direction: column;
+  }
+
+  .info_section .info_form form input {
+    width: 100%;
+  }
+
+  .info_section .info_form form button {
+    margin-top: 15px;
+    padding: 10px 40px;
+  }
+}
+
+@media (max-width: 480px) {}
+
+@media (max-width: 420px) {
+
+  .slider_section .carousel-control-prev,
+  .slider_section .carousel-control-next {
+    right: 0;
+  }
+}
+
+@media (max-width: 360px) {}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	/*
+	Label the data
+	*/
+	td:nth-of-type(1):before { content: "Date"; }
+	td:nth-of-type(2):before { content: "Time"; }
+	td:nth-of-type(3):before { content: "Room"; }
+	td:nth-of-type(4):before { content: "Event"; }
+	td:nth-of-type(5):before { content: "Topics"; }
+}

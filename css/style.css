@@ -789,45 +789,28 @@ a:focus {
 
 /* spacing */
  
-table {
-  table-layout: fixed;
-  width: 100%;
-  border-collapse: collapse;
-  /*border: 3px solid black;*/
-}
-
-thead th:nth-child(1) {
-  width: 20%;
-}
-
-thead th:nth-child(2) {
-  width: 20%;
-}
-
-thead th:nth-child(3) {
-  width: 20%;
-}
-
-thead th:nth-child(4) {
-  width: 20%;
-}
-
-thead th:nth-child(5) {
-  width: 20%;
-}
-
-table tr {
-  border-bottom: background: #aaa;
-}
-
-
-th{
-    background-color: #aaa;
-}
-td {
-  padding: 20px;
-  text-align: left;
-  border: 1px solid #ddd;
-}
+/* Add some basic styling to the tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        
+        th, td {
+            border: 1px solid #000000;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #aaa;
+        }
+        
+        /* Add responsive CSS for smaller screens */
+        @media (max-width: 600px) {
+            table {
+                font-size: 12px;
+            }
+        }
 
 /*# sourceMappingURL=style.css.map */

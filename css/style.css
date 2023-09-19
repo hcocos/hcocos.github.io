@@ -801,16 +801,44 @@ a:focus {
             padding: 8px;
             text-align: left;
         }
-        
+       
         th {
             background-color: #aaa;
         }
         
+        
         /* Add responsive CSS for smaller screens */
-        @media (max-width: 600px) {
+ 	@media (max-width: 400px) {
             table {
                 font-size: 12px;
             }
         }
+
+ #smallTable {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        #smallTable th, #smallTable td {
+            border: 1px solid #000000;
+            padding: 8px;
+            text-align: left;
+        }
+
+        #smallTable th {
+            background-color: #aaa;
+        }
+
+        /* Apply responsive styles for smaller screens */
+        @media (max-width: 600px) {
+            #smallTable td:last-child {
+                display: none;
+            }
+            #smallTable th:last-child {
+                display: none;
+            }
+        }
+
 
 /*# sourceMappingURL=style.css.map */

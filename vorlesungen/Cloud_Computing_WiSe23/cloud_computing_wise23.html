@@ -99,21 +99,27 @@
         Parts of the slide sets are based on the book <b>Cloud Computing: Web-Based Dynamic IT Services</b>, which was published in 2011 by Springer. ISBN: 978-3-642-20916-1
     </p>
     <p>
-        This course has no written exam! Instead, your grade will depend 100% on your work and the results of the semester project. In previous semesters, each group had worked on completely different themes. This semester, all groups will work on one overarching theme.
+        This course has no written exam! Instead, your grade will depend 100% on your work and the results of the semester project. This semester we will have <b>three</b> projects, each group working on a different notion of the theme.
         <!-- In particular, all groups will work on the success of one primary goal. -->
     </p>
     <p>
-        <b>The semester project in the winter term 2023 has the goal to develop an <a href="https://en.wikipedia.org/wiki/Edge_computing">edge computing</a> solution for the automatic detection of pests (rats, cockroaches, mice).</b> The semester project includes:
+        <b>The semester project in the winter term 2023 has the goal to develop a solution in the realm of <a href="https://osmotic.org/osmotic-computing-principles/">osmotic computing</a>, service migration or service quality awareness for distributed workloads on client hardware.</b>
+        <br>
     </p>
-    <ul>
-        <li>development and setup of sensor nodes with <a href="https://www.raspberrypi.com/products/raspberry-pi-4-model-b/">single board computers</a> and <a href="https://projects.raspberrypi.org/en/projects/getting-started-with-picamera">camera modules</a></li>
-        <li>deployment of the <a href="https://www.raspberrypi.com/software/">operating system</a> and the <a href="https://github.com/Qengineering">object detection software</a></li>
-        <li>collection of a sufficient number of images for the training and testing of the object detection model (<a href="https://www.tensorflow.org/">Tensorflow</a>, <a href="https://opencv.org/">OpenCV</a>, <a href="https://pjreddie.com/darknet/yolo/">YOLO</a>)</li>
-        <li>development of a backend to manage the sensor nodes by and the collected data. The backend will be deployed as docker container on a <a href="https://medium.com/thinkport/how-to-build-a-raspberry-pi-kubernetes-cluster-with-k3s-76224788576c">Raspberry Pi Kubernetes Cluster</a> with <a href="https://k3s.io/">k3s</a> (or a similar solution)</li>
-        <li>development of a frontend to present e.g. log information, event messages, and a map of events with proof like images and timestamps. The frontend will be deployed as docker container on a <a href="https://medium.com/thinkport/how-to-build-a-raspberry-pi-kubernetes-cluster-with-k3s-76224788576c">Raspberry Pi Kubernetes Cluster</a> with <a href="https://k3s.io/">k3s</a> (or a similar solution) too</li>
-    </ul>
     <p>
-        <b>The requirements will be collected in class, discussed, and distributed among the individual teams on October 27th. We will try to design and assign the tasks so that the failure of individual team members and teams does not lead to the collapse of the overall project. It is very important that all participants of the module attend class on the 27th of October!</b>
+    <style>
+        ul{text-align: left;}
+    </style>
+    <ul>
+        The semester project includes:
+        <li>research on the topic and investigation on the application fields.</li>
+        <li>research on the use of the approach in an offline-first concept.</li>
+        <li>development of a conceptual framework for the use in an offline-first setting.</li>
+        <li>development of a prototypical showcase for the implementation of your conceptual framework.</li>
+    </ul>
+    </p>
+    <p>
+        <b>The requirements will be collected in class, discussed, and distributed among the individual teams on October 18th. We will try to design and assign the tasks so that the failure of individual team members and teams does not lead to the collapse of the overall project. It is very important that all participants of the module attend class on the 18th of October! Information on the <a href="Unterlagen/cloud_computing_WS2223_slideset_03.pdf">semester project</a> can be found in the corse materials on this site. </b>
     </p>
     </div>
 </div>
@@ -149,10 +155,6 @@
     <td role="cell">Wednesdays</td>
     <td role="cell">11:45-13:15</td>
     <td role="cell">Room 1-234 and 1-237</td>
-    </tr>
-    <tr style="background: #aaa;">
-    <td colspan="4"></td>
-    </tr>
   </tbody>
   <tfoot>
   </tfoot>
@@ -168,39 +170,34 @@
     <h3>
         Schedule of the Course
     </h3>
-<table role="table">
+<table id="smallTable" role="table">
 <caption>
         Schedule of the Course
 </caption>
 <thead role="rowgroup">
     <tr>
-    <th role="columnheader" scope="col">Event</th>
-    <th role="columnheader" scope="col">Date</th>
-    <th role="columnheader" scope="col">Time</th>
-    <th role="columnheader" scope="col">Room</th>
-    <th role="columnheader" scope="col">Topics</th>
+    <th data-label="Event" role="columnheader" scope="col">Event</th>
+    <th data-label="Date" role="columnheader" scope="col">Date</th>
+    <th data-label="Time" role="columnheader" scope="col">Time</th>
+    <th data-label="Room" role="columnheader" scope="col">Room</th>
+    <th data-label="Topics" role="columnheader" scope="col">Topics</th>
     </tr>
 </thead>
 <tbody role="rowgroup">
 
     <tr>
-    <th role="row" scope="row">Lecture 1</th>
-    <td role="cell">18.10.2023</td>
-    <td role="cell">11:45-13:15</td>
-    <td role="cell">1-234</td>
-    <td role="cell">Discussion of slide set 1 (slides 1-30)</td>
+    <th data-label="Event" role="row" scope="row">Lecture 1</th>
+    <td data-label="Date" role="cell">18.10.2023</td>
+    <td data-label="Time" role="cell">10:00-11:30</td>
+    <td data-label="Room" role="cell">1-234</td>
+    <td data-label="Topics" role="cell">Discussion of slide set 1 (slides 1-30)</td>
     </tr>
     <tr>
-    <th role="row" scope="row">Exercise 1</th>
-    <td role="cell">18.10.2023</td>
-    <td role="cell">14:15-15:45</td>
-    <td role="cell">1-234</td>
-    <td role="cell">Introduction to semester project and exercises</td>
-    </tr>
-    <tr style="background: #aaa;">
-    <td colspan="5"></td>
-    </tr>
-
+    <th data-label="Event" role="row" scope="row">Exercise 1</th>
+    <td data-label="Date" role="cell">18.10.2023</td>
+    <td data-label="Time" role="cell">11:45-13:15</td>
+    <td data-label="Room" role="cell">1-234</td>
+    <td data-label="Topics" role="cell">Introduction to semester project and exercises</td>
   </tbody>
   <tfoot>
   </tfoot>
@@ -224,10 +221,10 @@
     <div class="box">
     <div class="detail-box">
     <h3>
-            Course Materials
+        Course Materials
     </h3>
 <div class="table-responsive">
-<table class="table2" role="table">
+<table id="smallTable" role="table">
 <caption>
       Slide Sets
 </caption>
@@ -256,7 +253,7 @@
     </tr>
 
     <tr>
-    <td role="row" scope="row"><a href="Unterlagen/cloud_computing_WS2223_slideset_03.pdf">Slide set 3</td>
+    <td role="row" scope="row"><a href="Unterlagen/cloud_computing_WS2223_slideset_03.pdf">Slide set 3</a></td>
     <td role="cell">Cloud Computing, Services and Concepts, Opportunities and Risks</td>
     </tr>
     <tr style="background: #aaa;">
@@ -282,7 +279,7 @@
 </thead>
 <tbody role="rowgroup">
     <tr>
-    <td role="row" scope="row"><a href="Unterlagen/cloud_computing_WS2223_slideset_03.pdf">Semester project description</td>
+    <td role="row" scope="row"><a href="Unterlagen/cloud_computing_WS2223_slideset_03.pdf">Semester project description</a></td>
     <td role="cell">Description of the semester project for the course Cloud Computing</td>
     </tr>
     </tr>
@@ -290,7 +287,7 @@
     <td colspan="2"></td>
     </tr>
     <tr>
-    <td role="row" scope="row"><a href="Unterlagen/cloud_computing_WS2223_slideset_03.pdf">Final report criteria</td>
+    <td role="row" scope="row"><a href="Unterlagen/cloud_computing_WS2223_slideset_03.pdf">Final report criteria</a></td>
     <td role="cell">Criteria for the final report in Cloud Computing</td>
     </tr>
     </tr>
@@ -298,7 +295,7 @@
     <td colspan="2"></td>
     </tr>
     <tr>
-    <td role="row" scope="row"><a href="Unterlagen/Computer_Society_LaTeX_template.zip">IEEE paper template</td>
+    <td role="row" scope="row"><a href="Unterlagen/Computer_Society_LaTeX_template.zip">IEEE paper template</a></td>
     <td role="cell">Template for the final report in Cloud Computing</td>
     </tr>
     </tr>

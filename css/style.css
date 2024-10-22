@@ -336,7 +336,22 @@ a:focus {
   margin: 25px 1%;
   -ms-flex-preferred-size: 90%;
       flex-basis: 90%;
-    background-color: #b6d2e4;
+    background-color:  #b6d2e4;
+  padding: 35px 25px 25px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+  border-top: 15px solid transparent;
+  overflow: hidden;
+  -webkit-transition: all .1s;
+  transition: all .1s;
+}
+
+.service_container_red .box {
+  margin: 25px 1%;
+  -ms-flex-preferred-size: 90%;
+      flex-basis: 90%;
+    background-color: #fd7c6e;
   padding: 35px 25px 25px;
   border-radius: 15px;
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);

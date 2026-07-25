@@ -275,7 +275,7 @@
                   <p>
                      2026 Henry Cocos
                   </p>
-                  <p>Zuletzt aktualisiert: {{ "now" | date: "%d.%m.%Y" }}</p>
+                  <p>Zuletzt aktualisiert am: <span id="last-update">wird geladen...</span></p>
                </div>
             </div>
          </div>
@@ -283,5 +283,33 @@
       <!-- footer section -->
       <script src="js/jquery-3.4.1.min.js"></script>
       <script src="js/bootstrap.js"></script>
+      <!-- script zum Update des letzten aenderungsdatums -->
+      <script>
+      async function fetchLastUpdate() {
+      const username = "hcocos";
+      const repo = "hcocos.github.io";
+      const url = `https://github.com{username}/${repo}`;
+      try {
+         const response = await fetch(url);
+         if (!response.ok) throw new Error('Netzwerk-Fehler');
+
+         const data = await response.json();
+
+         // Nutzt das Datum des letzten Commits/Pushs
+         const date = new Date(data.pushed_at);
+
+         // Formatiert das Datum auf Deutsch (z.B. 25.07.2026)
+         const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+         document.getElementById('last-update').innerText = date.toLocaleDateString('de-DE', options);
+         } catch (error) {
+            console.error('Fehler beim Abrufen des Datums:', error);
+            document.getElementById('last-update').innerText = "Nicht verfügbar";
+            }
+      }
+
+      // Führt die Funktion nach dem Laden der Seite aus
+      window.onload = fetchLastUpdate;
+      </script>
+
    </body>
 </html>

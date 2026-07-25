@@ -285,31 +285,33 @@
       <script src="js/bootstrap.js"></script>
       <!-- script zum Update des letzten aenderungsdatums -->
       <script>
-      async function fetchLastUpdate() {
-      const username = "hcocos";
-      const repo = "hcocos.github.io";
-      const url = `https://github.com/{username}/${repo}`;
-      try {
-         const response = await fetch(url);
-         if (!response.ok) throw new Error('Netzwerk-Fehler');
+  async function fetchLastUpdate() {
+    const username = "hcocos";
+    const repo = "hcocos.github.io";
+    const url = `https://github.com{username}/${repo}`;
 
-         const data = await response.json();
+    try {
+      const response = await fetch(url);
+      if (!response.ok) throw new Error('Netzwerk-Fehler');
 
-         // Nutzt das Datum des letzten Commits/Pushs
-         const date = new Date(data.pushed_at);
+      const data = await response.json();
 
-         // Formatiert das Datum auf Deutsch (z.B. 25.07.2026)
-         const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
-         document.getElementById('last-update').innerText = date.toLocaleDateString('de-DE', options);
-         } catch (error) {
-            console.error('Fehler beim Abrufen des Datums:', error);
-            document.getElementById('last-update').innerText = "Nicht verfügbar";
-            }
-      }
+      // Nutzt das Datum des letzten Commits/Pushs
+      const date = new Date(data.pushed_at);
 
-      // Führt die Funktion nach dem Laden der Seite aus
-      window.onload = fetchLastUpdate;
-      </script>
+      // Formatiert das Datum auf Deutsch (z.B. 25.07.2026)
+      const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+      document.getElementById('last-update').innerText = date.toLocaleDateString('de-DE', options);
+    } catch (error) {
+      console.error('Fehler beim Abrufen des Datums:', error);
+      document.getElementById('last-update').innerText = "Nicht verfügbar";
+    }
+  }
+
+  // Führt die Funktion nach dem Laden der Seite aus
+  window.onload = fetchLastUpdate;
+</script>
+
 
    </body>
 </html>
